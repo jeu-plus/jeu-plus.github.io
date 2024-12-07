@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Mathématique - Question 1</title>
+        <style>
+          body {
+            text-align: center;
+          }
+          input[type="text"] {
+            width: 80px;
+            height: 80px;
+            font-size: 20px;
+            text-align: center;
+            margin-left: 10px;
+            border: 2px solid black;
+          }
+          input[type="button"] {
+            font-size: 20px;
+            padding: 10px 20px;
+          }
+          /*https://www.w3schools.com/css/css_form.asp*/
+          #equation {
+            display: inline-flex;;
+            align-items: center;
+            font-size: 50px;
+          }
+          #affiche {
+            font-size: 30px;
+        </style>
+    </head>
+
+    <body>
+      <form>
+    <h1 id="title">Mathématique - Question 1</h1>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMMiHtgZ2Uf20wUOCYAcGZeq3L4ygzCHkHJg&s" height="250px" width="600px">
+      <p style="font-size: 30px;">Marc a 12 billes et il en donne 7 à son ami Lucas. Ensuite, il reçoit 5 billes de son autre ami. Combien de billes Marc a-t-il maintenant?</p>
+      <br>
+      <hr>
+      <br>
+      <div id=equation>
+      <p>12 - 7 + 5 = </p>
+      <input type="text" id="reponse1">
+      </div>
+        <br>
+        <input type="button" onclick= "verifie()"  value="Soummettre">
+        <div id="affiche"></div>
+
+      <script>
+        function verifie() {
+          var reponse1 = parseInt(document.getElementById("reponse1").value)
+          var message = ""
+        if (reponse1 == 10) {
+          message += "Bravo! La réponse est correcte."
+        } else {
+          message += "La réponse est incorrecte."
+        }
+          affiche.innerHTML = message
+        }
+      </script>
+      </form>
+    </body>
+</html>
