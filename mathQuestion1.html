@@ -44,7 +44,7 @@
         <br>
         <input type="button" onclick= "verifie()"  value="Soummettre">
         <div id="affiche"></div>
-
+        <input type="button" onclick="back()"  value="Retour">
       <script>
         function verifie() {
           var reponse1 = parseInt(document.getElementById("reponse1").value)
@@ -55,6 +55,9 @@
           message += "La réponse est incorrecte."
         }
           affiche.innerHTML = message
+        }
+        function back() {
+          location.href = "index.html"
         }
       </script>
       </form>
