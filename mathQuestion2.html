@@ -14,6 +14,7 @@
             font-size: 20px;
             text-align: center;
             margin-left: 10px;
+            margin-right: 10px;
             border: 2px solid black;
           }
           input[type="button"] {
@@ -34,36 +35,48 @@
             bottom: 20px;
             left: 20px;
           }
+          #prochain {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+          }
         </style>
     </head>
 
     <body>
       <form>
     <h1 id="title">Mathématique - Question 2</h1>
-      <img src="mathQuestion1.jpg" height="325px" width="750px">
-      <p style="font-size: 30px;">Marc a 12 billes et il en donne 7 à son ami Lucas. Ensuite, il reçoit 5 billes de son autre ami. Combien de billes Marc a-t-il maintenant?</p>
+      <img src="https://www.shutterstock.com/image-vector/pile-video-games-pack-flat-260nw-646616746.jpg" height="325px" width="750px">
+      <p style="font-size: 30px;">Un jeu vidéo coûte 50$. Il y a une réduction de 20%. Combien coûte le jeu après la réduction?</p>
       <hr>
       <div id=equation>
-      <p>12 - 7 + 5 = </p>
-      <input type="text" id="reponse1">
+      <p>50$ * 0.80 = </p>
+      <input type="text" id="reponse2">
+      <p>$</p>
       </div>
         <br>
         <input type="button" onclick= "verifie()"  value="Soummettre">
         <div id="affiche"></div>
         <input type="button" id="retour" onclick="back()"  value="Retour">
+        <input type="button" id="prochain" onclick="next()"  style="display: none;" value="Prochaine Question">
       <script>
         function verifie() {
-          var reponse1 = parseInt(document.getElementById("reponse1").value)
+          var reponse2 = parseInt(document.getElementById("reponse2").value)
           var message = ""
-        if (reponse1 == 10) {
+        if (reponse2 == 40) {
           message += "Bravo! La réponse est correcte."
+          prochain.style.display = "block"
         } else {
           message += "La réponse est incorrecte."
+          prochain.style.display = "none"
         }
           affiche.innerHTML = message
         }
         function back() {
           location.href = "index.html"
+        }
+        function next() {
+          location.href = "mathQuestion2.html"
         }
       </script>
       </form>
