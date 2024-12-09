@@ -57,13 +57,11 @@
           var message = ""
         if (reponse1 == 10) {
           message += "Bravo! La réponse est correcte."
+          prochain.style.display = "block"
         } else {
           message += "La réponse est incorrecte."
-        } if (reponse1 == 10) {
-            prochain.style.display = "block"
-        } else {
-            prochain.style.display = "none"
-        }
+          prochain.style.display = "none"
+        } 
           affiche.innerHTML = message
         }
         function back() {
