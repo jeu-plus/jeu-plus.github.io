@@ -1,40 +1,80 @@
 <!DOCTYPE html>
-  <html>
-    <!-- creation des mots sur l'onglet-->
+<html>
     <head>
-      <meta charset="utf-8">
-      <title>Quiz: Géographie</title>
+        <meta charset="utf-8">
+        <title>Géographie - Question 1</title>
+        <style>
+          body {
+            text-align: center;
+          }
+          input[type="text"] {
+            width: 80px;
+            height: 80px;
+            font-size: 20px;
+            text-align: center;
+            margin-left: 10px;
+            border: 2px solid black;
+          }
+          input[type="button"] {
+            font-size: 20px;
+            padding: 10px 20px;
+          }
+          #equation {
+            display: inline-flex;;
+            align-items: center;
+            font-size: 50px;
+          }
+          #affiche {
+            font-size: 30px;
+          }
+          #retour {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+          }
+          #prochain {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+          }
+        </style>
     </head>
-  <body>
-<!-- Introduction au quiz -->
-<h1>Quiz de Géographie</h1>
-  <br><br>
-<p>
-  Bienvenue au quiz de Géo! <br>
-Nous vous demanderons 3 questions, <br>
-Répond le meilleur que tu peut! <br>
-</p>
-     <h1 id="title">Géographie - Question 1</h1>
-    <hr>
+
+    <body>
+      <form>
+    <h1 id="title">Géographie - Question 1</h1>
+      <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Fpremium-vector%2Fasia-continent-countries-highlighted-red-world-map-vector_33125745.htm&psig=AOvVaw1a5G4MSVpuYU1H1WKC0fO6&ust=1733861248315000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKCz2NK-m4oDFQAAAAAdAAAAABAQ" height="325px" width="750px">
+      <p style="font-size: 30px;">Quelle est le nom du continent en rouge?</p>
+      <hr>
+      <div id=asie>
+      <p>Quelle est le nom du continent en rouge?</p>
       <input type="text" id="reponse1">
+      </div>
         <br>
         <input type="button" onclick= "verifie()"  value="Soummettre">
         <div id="affiche"></div>
         <input type="button" id="retour" onclick="back()"  value="Retour">
+        <input type="button" id="prochain" onclick="next()"  style="display: none;" value="Prochaine Question">
       <script>
         function verifie() {
-          var reponse1 = "Asie"
+          var reponse1 = parseInt(document.getElementById("reponse1").value)
           var message = ""
-        if (reponse1 == "Asie") {
+        if (reponse1 == "asie" && "Asie") {
           message += "Bravo! La réponse est correcte."
+          prochain.style.display = "block"
         } else {
           message += "La réponse est incorrecte."
-        }
+          prochain.style.display = "none"
+        } 
           affiche.innerHTML = message
         }
         function back() {
           location.href = "index.html"
         }
+        function next() {
+          location.href = "mathQuestion2.html"
+        }
       </script>
-  </form>
-  </body>
+      </form>
+    </body>
+</html>
