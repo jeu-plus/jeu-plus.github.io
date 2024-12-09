@@ -59,6 +59,10 @@
           message += "Bravo! La réponse est correcte."
         } else {
           message += "La réponse est incorrecte."
+        } if (reponse1 == 10) {
+            prochain.style.display = "block"
+        } else {
+            prochain.style.display = "none"
         }
           affiche.innerHTML = message
         }
