@@ -14,11 +14,26 @@
 Nous vous demanderons 3 questions, <br>
 Répond le meilleur que tu peut! <br>
 </p>
-
-
-
-
-
-
-
+    <hr>
+      <input type="text" id="reponse1">
+        <br>
+        <input type="button" onclick= "verifie()"  value="Soummettre">
+        <div id="affiche"></div>
+        <input type="button" id="retour" onclick="back()"  value="Retour">
+      <script>
+        function verifie() {
+          var reponse1 = "Asie"
+          var message = ""
+        if (reponse1 == "Asie") {
+          message += "Bravo! La réponse est correcte."
+        } else {
+          message += "La réponse est incorrecte."
+        }
+          affiche.innerHTML = message
+        }
+        function back() {
+          location.href = "index.html"
+        }
+      </script>
+  </form>
   </body>
