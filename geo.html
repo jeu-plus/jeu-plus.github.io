@@ -39,14 +39,15 @@
           }
         </style>
     </head>
-
     <body>
       <form>
+          <!-- creation de la premiere question -->
     <h1 id="title">Géographie - Question 1</h1>
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Asia_in_the_world_%28red%29_%28W3%29.svg/800px-Asia_in_the_world_%28red%29_%28W3%29.svg.png" height="325px" width="750px">
       <p style="font-size: 30px;">Quelle est le nom du continent en rouge?</p>
       <hr>
       <div id=asie>
+          <!-- Indice envers la réponse -->
       <p>Il y a seulment 7 continents.</p>
       <input type="text" id="reponse1">
       </div>
@@ -56,10 +57,11 @@
         <input type="button" id="retour" onclick="back()"  value="Retour">
         <input type="button" id="prochain" onclick="next()"  style="display: none;" value="Prochaine Question">
       <script>
+          //function pour vérifier si la réponse est bonne et si non, affiche un message que cela n'est pas bbon
         function verifie() {
           var reponse1 = parseInt(document.getElementById("reponse1").value)
           var message = ""
-        if (reponse1 == "asie" && "Asie") {
+        if (reponse1 == asie) {
           message += "Bravo! La réponse est correcte."
           prochain.style.display = "block"
         } else {
