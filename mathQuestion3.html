@@ -54,17 +54,12 @@
           var pereimetreCorrect = false
           var aireCorrect = false
           var nombreDeCheck = 0
-        for (var i=0; i < checkboxes.length; i++) {
-         if (checkboxes[i].checked) {
-             nombreDeCheck++
-             if (checkboxes[i].value == "14") {
-         perimetreCorrect = true
-          } else if (checkboxes[i].value == "10") {
-           aireCorrect = true
-         }
-        }
-        }
-        if ((nombreDeCheck == 2) && (perimetreCorrect == true) && (aireCorrect == true)) {
+          for (var i=0; i < checkboxes.length; i++) {
+             if (checkboxes[i].checked) {
+                 nombreDeCheck++
+             }
+          }
+        if ((nombreDeCheck == 2) && (pereimetreCheckbox.checked && aireCheckbox.checked)) {
             message += "Bravo! La réponse est correcte."
         } else {
             message += "La réponse est incorrecte."
