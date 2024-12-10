@@ -46,7 +46,7 @@
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Asia_in_the_world_%28red%29_%28W3%29.svg/800px-Asia_in_the_world_%28red%29_%28W3%29.svg.png" height="325px" width="750px">
       <p style="font-size: 30px;">Quelle est le nom du continent en rouge?</p>
       <hr>
-      <div id=asie>
+      <div id=continent>
           <!-- Indice envers la réponse -->
       <p>Il y a seulment 7 continents.</p>
       <input type="text" id="reponse1">
@@ -61,7 +61,7 @@
         function verifie() {
           var reponse1 = document.getElementById("reponse1").value
           var message = ""
-        if (reponse1 == asie) {
+        if (reponse1 == "asie") {
           message += "Bravo! La réponse est correcte."
           prochain.style.display = "block"
         } else {
