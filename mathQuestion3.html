@@ -51,18 +51,20 @@
         function verifie() {
           var checkboxes = document.getElementsByName("perimetreAire")
           var message = ""
-          var pereimetreCorrect = false;
-          var aireCorrect = false;
+          var pereimetreCorrect = false
+          var aireCorrect = false
+          var nombreDeCheck = 0
         for (var i=0; i < checkboxes.length; i++) {
          if (checkboxes[i].checked) {
+             nombreDeCheck++
              if (checkboxes[i].value == "14") {
-         perimetreCorrect = true;
+         perimetreCorrect = true
           } else if (checkboxes[i].value == "10") {
-           aireCorrect = true;
+           aireCorrect = true
          }
         }
         }
-        if ((perimetreCorrect == true) && (aireCorrect == true)) {
+        if ((nombreDeCheck == 2) && (perimetreCorrect == true) && (aireCorrect == true)) {
             message += "Bravo! La réponse est correcte."
         } else {
             message += "La réponse est incorrecte."
