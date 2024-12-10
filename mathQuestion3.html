@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Mathématique - Question 3</title>
+        <style>
+          body {
+            text-align: center;
+          }
+          input[type="text"] {
+            width: 80px;
+            height: 80px;
+            font-size: 20px;
+            text-align: center;
+            margin-left: 10px;
+            margin-right: 10px;
+            border: 2px solid black;
+          }
+          input[type="button"] {
+            font-size: 20px;
+            padding: 10px 20px;
+          }
+          /*https://www.w3schools.com/css/css_form.asp*/
+          #equation {
+            display: inline-flex;;
+            align-items: center;
+            font-size: 50px;
+          }
+          #affiche {
+            font-size: 30px;
+          }
+          #retour {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+          }
+        </style>
+    </head>
+
+    <body>
+      <form>
+    <h1 id="title">Mathématique - Question 3</h1>
+      <img src="https://www.shutterstock.com/image-vector/pile-video-games-pack-flat-260nw-646616746.jpg" height="325px" width="750px">
+      <p style="font-size: 30px;">Jack peint un mur rectangulaire qui mesure 5 mètres de long et 2 mètres de haut. Quelle est le périmètre et l’aire du mur?</p>
+      <hr>
+      <input type="checkbox" id="reponse2" name="perimetreAire" value="14">Périmète = 14 métres<br>
+      <input type="checkbox" id="reponse2" name="perimetreAire" value="7">Périmète = 7 métres<br>
+      <input type="checkbox" id="reponse2" name="perimetreAire" value="5">Aire = 5 métres^2<br>
+      <input type="checkbox" id="reponse2" name="perimetreAire" value="10">Aire = 10 métres^2<br>
+      <p>$</p>
+      </div>
+        <br>
+        <input type="button" onclick= "verifie()"  value="Soummettre">
+        <div id="affiche"></div>
+        <input type="button" id="retour" onclick="back()"  value="Retour">
+      <script>
+        function verifie() {
+          var reponse2 = parseInt(document.getElementsByName("perimetreAire"))
+          var message = ""
+        for (var i=0; i < reponse2.length; i++) {
+         if (reponse2[i].checked) {
+         message += "Bravo! La réponse est correcte.";
+          } else {
+           message += "La réponse est incorrecte."
+         }
+        }
+          affiche.innerHTML = message
+        }
+        function back() {
+          location.href = "index.html"
+        }
+      </script>
+      </form>
+    </body>
+</html>
