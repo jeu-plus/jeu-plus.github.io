@@ -49,11 +49,11 @@
         <input type="button" id="retour" onclick="back()"  value="Retour">
       <script>
         function verifie() {
-          var checkboxes = document.getElementsByName("perimetreAire")
-          var message = ""
-          var pereimetreCorrect = false
-          var aireCorrect = false
+           var checkboxes = document.getElementsByName("perimetreAire")
+          var pereimetreCheckbox = document.getElementById("reponse1")
+          var aireCheckbox = document.getElementById("reponse4")
           var nombreDeCheck = 0
+          var message = ""
           for (var i=0; i < checkboxes.length; i++) {
              if (checkboxes[i].checked) {
                  nombreDeCheck++
