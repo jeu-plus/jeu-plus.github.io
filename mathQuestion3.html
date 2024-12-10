@@ -8,17 +8,10 @@
           body {
             text-align: center;
           }
-            form {
-            display: inline-block;
-          }
           input[type="checkbox"] {
-            vertical-align: middle;
-            margin: 10px;
-          }
-          label {
+            text-align: center;
             font-size: 20px;
             display: block;
-            margin: 10px auto;
           }
           input[type="button"] {
             font-size: 20px;
@@ -47,10 +40,10 @@
       <img src="https://www.shutterstock.com/image-vector/pile-video-games-pack-flat-260nw-646616746.jpg" height="325px" width="750px">
       <p style="font-size: 30px;">Jack peint un mur rectangulaire qui mesure 5 mètres de long et 2 mètres de haut. Quelle est le périmètre et l’aire du mur?</p>
       <hr>
-      <label><input type="checkbox" id="reponse1" name="perimetreAire" value="14">Périmètre = 14 métres</label>
-      <label><input type="checkbox" id="reponse2" name="perimetreAire" value="7">Périmètre = 7 métres</label>
-      <label><input type="checkbox" id="reponse3" name="perimetreAire" value="5">Aire = 5 métres^2</label>
-      <label><input type="checkbox" id="reponse4" name="perimetreAire" value="10">Aire = 10 métres^2</label>
+      <input type="checkbox" id="reponse1" name="perimetreAire" value="14">Périmètre = 14 métres<br>
+      <input type="checkbox" id="reponse2" name="perimetreAire" value="7">Périmètre = 7 métres<br>
+      <input type="checkbox" id="reponse3" name="perimetreAire" value="5">Aire = 5 métres^2<br>
+      <input type="checkbox" id="reponse4" name="perimetreAire" value="10">Aire = 10 métres^2<br>
         <br>
         <input type="button" onclick= "verifie()"  value="Soummettre">
         <div id="affiche"></div>
