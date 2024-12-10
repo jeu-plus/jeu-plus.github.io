@@ -56,12 +56,21 @@
         function verifie() {
           var reponse2 = parseInt(document.getElementsByName("perimetreAire"))
           var message = ""
-        for (var i=0; i < reponse2.length; i++) {
-         if ((reponse2[i].checked == 14) && (reponse2[i].checked == 10)) {
-         message += "Bravo! La réponse est correcte.";
-          } else {
-           message += "La réponse est incorrecte."
+          var pereimetreCorrect = false;
+          var aireCorrect = false;
+        for (var i=0; i < checkboxes.length; i++) {
+         if (checkboxes[i].checked) {
+             if (checkboxes[i].value == "14") {
+         pereimetreCorrect = true;
+          } else if (checkboxes[i].value == "10") {
+           aireCorrect = true;
          }
+        }
+        }
+        if ((pereimetreCorrect == true) && (aireCorrect == true)) {
+            message += "Bravo! La réponse est correcte."
+        } else {
+            message += "La réponse est incorrecte."
         }
           affiche.innerHTML = message
         }
