@@ -75,10 +75,14 @@
           if (localStorage.getItem('score') === null) {
          localStorage.setItem('score', 0)
           }
+          if (localStorage.getItem('answered') === null) {
+         localStorage.setItem('answered', 0)
+          }
           var score = localStorage.getItem('score')
           document.getElementById('scoreValue').innerText = score
           function refresh() {
             localStorage.setItem('score', 0)
+            localStorage.setItem('answered', false)
           }
         </script>
       </form>
