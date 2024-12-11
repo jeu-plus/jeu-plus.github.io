@@ -79,8 +79,12 @@
         }
         function incremente(){
           var score = parseInt(localStorage.getItem('score'))
-          score = parseInt(score) + 1
-          localStorage.setItem('score', score)
+          if (score < 9) {
+            if (localStorage.getItem('question1Answered') !== 'true') {
+              score += 1
+              localStorage.setItem('score', score)
+              localStorage.setItem('question1Answered', 'true')
+            }
         }
       </script>
       </form>
