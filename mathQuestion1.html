@@ -78,12 +78,16 @@
           var message = ""
         if (reponse1 == 10) {
           message += "Bravo! La réponse est correcte."
-          prochain.style.display = "block"
+          localStorage.setItem('answered1', true)
           incremente()
         } else {
           message += "La réponse est incorrecte."
-          prochain.style.display = "none"
         } 
+        if (localStorage.getItem('answered1') == true) {
+          prochain.style.display = "block"
+        } else {
+          prochain.style.display = "none"
+        }
           affiche.innerHTML = message
         }
         function back() {
@@ -99,6 +103,9 @@
               localStorage.setItem('score', score)
         }
         }
+        if (localStorage.getItem('answered1') === null) {
+         localStorage.setItem('answered1', false)
+          }
       </script>
       </form>
     </body>
