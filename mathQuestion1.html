@@ -101,12 +101,12 @@
           if (score < 9) {
               score += 1
               localStorage.setItem('score', score)
+              document.getElementById('scoreValue').innerText = score
         }
         }
         if (localStorage.getItem('answered1') === null) {
          localStorage.setItem('answered1', false)
           }
-        document.getElementById('scoreValue').innerText = localStorage.getItem('score')
       </script>
       </form>
     </body>
