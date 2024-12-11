@@ -59,7 +59,7 @@
       <script>
           //function pour vérifier si la réponse est bonne et si non, affiche un message que cela n'est pas bbon
         function verifie() {
-          var reponse1 = document.getElementById("reponse1").value
+          var reponse1 = (document.getElementById("reponse1").value).toLowerCase()
           var message = ""
         if (reponse1 == "asie") {
           message += "Bravo! La réponse est correcte."
