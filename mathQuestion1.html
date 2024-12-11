@@ -64,6 +64,7 @@
         if (reponse1 == 10) {
           message += "Bravo! La réponse est correcte."
           prochain.style.display = "block"
+          incremente()
         } else {
           message += "La réponse est incorrecte."
           prochain.style.display = "none"
@@ -75,6 +76,11 @@
         }
         function next() {
           location.href = "mathQuestion2.html"
+        }
+        function incremente(){
+          var score = parseInt(localStorage.getItem('score'))
+          score = parseInt(score) + 1
+          localStorage.setItem('score', score)
         }
       </script>
       </form>
