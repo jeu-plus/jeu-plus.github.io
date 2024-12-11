@@ -96,6 +96,7 @@
           var score = parseInt(localStorage.getItem('score'))
           if (score < 9) {
               score += 1
+              localStorage.setItem('score', score)
         }
         }
       </script>
