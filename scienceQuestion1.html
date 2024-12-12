@@ -65,7 +65,7 @@ Répond le meilleur que tu peut! <br>
         <input type="button" id="prochain" onclick="next()"  style="display: none;" value="Prochaine Question">
       <script>
         function verifie() {
-          var reponse1 = (document.getElementById("reponse1").value)
+          var reponse1 =  (document.getElementById("reponse1").value).toLowerCase()
           var message = ""
         if (reponse1 == "liquide" && "Liquide") {
           message += "Bravo! La réponse est correcte."
