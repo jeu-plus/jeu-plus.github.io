@@ -76,11 +76,6 @@
           var score = parseInt(localStorage.getItem('score'))
           localStorage.setItem('answered1', false)
           document.getElementById('scoreValue').innerText = score
-          if (localStorage.getItem('answered1') == true) {
-          document.getElementById('prochain').style.display = 'block'
-        } else {
-          document.getElementById('prochain').style.display = 'none'
-        }
         function verifie() {
           var reponse1 = parseInt(document.getElementById("reponse1").value)
           var message = ""
@@ -92,6 +87,11 @@
           message += "La réponse est incorrecte."
         } 
           affiche.innerHTML = message
+        }
+        if (localStorage.getItem('answered1') === true) {
+          document.getElementById('prochain').style.display = 'block'
+        } else {
+          document.getElementById('prochain').style.display = 'none'
         }
         function back() {
           location.href = "index.html"
