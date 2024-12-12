@@ -74,24 +74,23 @@
         </div>
       <script>
           var score = parseInt(localStorage.getItem('score'))
-          localStorage.setItem('answered1', false)
           document.getElementById('scoreValue').innerText = score
+          if (localStorage.getItem('answered1') === "true") {
+          document.getElementById('prochain').style.display = 'block'
+          }
         function verifie() {
           var reponse1 = parseInt(document.getElementById("reponse1").value)
           var message = ""
         if (reponse1 == 10) {
+          message += "Bravo! La réponse est correcte."
+          if (localStorage.getItem('answered1') !== "true") {
           localStorage.setItem('answered1', true)
           incremente()
+          }
         } else {
           message += "La réponse est incorrecte."
         } 
           affiche.innerHTML = message
-        }
-        if (localStorage.getItem('answered1') === "true") {
-          message += "Bravo! La réponse est correcte."
-          document.getElementById('prochain').style.display = 'block'
-        } else {
-          document.getElementById('prochain').style.display = 'none'
         }
         function back() {
           location.href = "index.html"
