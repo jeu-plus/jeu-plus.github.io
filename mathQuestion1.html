@@ -74,7 +74,6 @@
         </div>
       <script>
           var score = parseInt(localStorage.getItem('score'))
-          document.getElementById('scoreValue').innerText = score
         function verifie() {
           var reponse1 = parseInt(document.getElementById("reponse1").value)
           var message = ""
@@ -101,6 +100,7 @@
         function incremente(){
           if (score < 9) {
               score += 1
+              document.getElementById('scoreValue').innerText = score
               localStorage.setItem('score', score)
         }
         }
