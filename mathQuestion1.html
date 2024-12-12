@@ -76,7 +76,7 @@
           var score = parseInt(localStorage.getItem('score'))
           document.getElementById('scoreValue').innerText = score
           if (localStorage.getItem('answered1') === "true") {
-          document.getElementById('prochain').style.display = 'block'
+          prochain.style.display = "block"
           }
         function verifie() {
           var reponse1 = parseInt(document.getElementById("reponse1").value)
