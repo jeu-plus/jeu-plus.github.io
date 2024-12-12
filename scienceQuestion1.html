@@ -78,7 +78,11 @@
           location.href = "scienceQuestion2.html"
         }
         function incremente(){
-          
+          if (score < 9) {
+            score += 1
+            document.getElementById('answered1').innerText = score
+            localStorage.setItem('answered1', false)
+          }  
         }
       </script>
       </form>
