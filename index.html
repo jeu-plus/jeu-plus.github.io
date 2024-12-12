@@ -72,9 +72,6 @@
         </div>
         <input type="button" onclick= "refresh()"  value="Refresh">
         <script>
-          if (localStorage.getItem('score') === null) {
-         localStorage.setItem('score', 0)
-          }
           var score = localStorage.getItem('score')
           document.getElementById('scoreValue').innerText = score
           function refresh() {
