@@ -89,9 +89,9 @@
           affiche.innerHTML = message
         }
         if (localStorage.getItem('answered1') == true) {
-          prochain.style.display = "block"
+          document.getElementById('prochain').style.display = 'block'
         } else {
-          prochain.style.display = "none"
+          document.getElementById('prochain').style.display = 'none'
         }
         function back() {
           location.href = "index.html"
