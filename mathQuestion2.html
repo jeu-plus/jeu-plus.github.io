@@ -40,6 +40,18 @@
             bottom: 20px;
             right: 20px;
           }
+          #score {
+            font-size: 20px;
+            background-color: gray;
+            top: 20px;
+            right: 20px;
+            position: fixed;
+            border-radius: 10px;
+            padding: 20px;
+            width: 90px;
+            height: 25px;
+            text-align: center;
+          }
         </style>
     </head>
 
@@ -59,16 +71,26 @@
         <div id="affiche"></div>
         <input type="button" id="retour" onclick="back()"  value="Retour">
         <input type="button" id="prochain" onclick="next()"  style="display: none;" value="Prochaine Question">
+          <div id="score">
+          Score : <span id="scoreValue">0</span>/9
+        </div>
       <script>
+          var score = parseInt(localStorage.getItem('score'))
+          document.getElementById('scoreValue').innerText = score
+          if (localStorage.getItem('answered2') === "true") {
+          prochain.style.display = "block"
+          }
         function verifie() {
           var reponse2 = parseInt(document.getElementById("reponse2").value)
           var message = ""
         if (reponse2 == 40) {
           message += "Bravo! La réponse est correcte."
+          if (localStorage.getItem('answered2') !== "true") {
+        localStorage.setItem('answered2', true)
           prochain.style.display = "block"
+          incremente()
         } else {
           message += "La réponse est incorrecte."
-          prochain.style.display = "none"
         }
           affiche.innerHTML = message
         }
@@ -78,6 +100,16 @@
         function next() {
           location.href = "mathQuestion3.html"
         }
+        function incremente(){
+          if (score < 9) {
+              score += 1
+              document.getElementById('scoreValue').innerText = score
+              localStorage.setItem('score', score)
+        }
+        }
+        if (localStorage.getItem('answered2') === null) {
+         localStorage.setItem('answered2', false)
+          }
       </script>
       </form>
     </body>
