@@ -85,12 +85,12 @@
         } else {
           message += "La réponse est incorrecte."
         } 
+          affiche.innerHTML = message
+        }
         if (localStorage.getItem('answered1') == true) {
           prochain.style.display = "block"
         } else {
           prochain.style.display = "none"
-        }
-          affiche.innerHTML = message
         }
         function back() {
           location.href = "index.html"
