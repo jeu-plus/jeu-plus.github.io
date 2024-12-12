@@ -84,6 +84,11 @@
             localStorage.setItem('answered1', false)
           }  
         }
+        /*Fomction pour le button et l'incrementation du score*/
+        if (localStorage.getItem('answered1') == null) { 
+          localStorage.setItem('answered1', false)
+        }
+        /*Vérifie si answered1 existe, si non, ce fait créer et assigner a false au début*/
       </script>
       </form>
     </body>
