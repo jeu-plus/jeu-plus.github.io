@@ -73,6 +73,7 @@
           Score : <span id="scoreValue">0</span>/9
         </div>
       <script>
+          document.getElementById('scoreValue').innerText = score
         function verifie() {
           var reponse1 = parseInt(document.getElementById("reponse1").value)
           var message = ""
