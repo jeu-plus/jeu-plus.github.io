@@ -74,6 +74,11 @@
         </div>
       <script>
           var score = parseInt(localStorage.getItem('score'))
+          if (localStorage.getItem('answered1') == true) {
+          document.getElementById('prochain').style.display = 'block'
+        } else {
+          document.getElementById('prochain').style.display = 'none'
+        }
           localStorage.setItem('answered1', false)
           document.getElementById('scoreValue').innerText = score
         function verifie() {
@@ -87,11 +92,6 @@
           message += "La réponse est incorrecte."
         } 
           affiche.innerHTML = message
-        }
-        if (localStorage.getItem('answered1') == true) {
-          document.getElementById('prochain').style.display = 'block'
-        } else {
-          document.getElementById('prochain').style.display = 'none'
         }
         function back() {
           location.href = "index.html"
