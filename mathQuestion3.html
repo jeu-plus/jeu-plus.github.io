@@ -31,6 +31,23 @@
             bottom: 20px;
             left: 20px;
           }
+          #fini {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+          }
+          #score {
+            font-size: 20px;
+            background-color: gray;
+            top: 20px;
+            right: 20px;
+            position: fixed;
+            border-radius: 10px;
+            padding: 20px;
+            width: 90px;
+            height: 25px;
+            text-align: center;
+          }
         </style>
     </head>
 
@@ -48,7 +65,13 @@
         <input type="button" onclick= "verifie()"  value="Soummettre">
         <div id="affiche"></div>
         <input type="button" id="retour" onclick="back()"  value="Retour">
+        <input type="button" id="fini" onclick="done()"  style="display: none;" value="Questionnaire Mathématique Terminé">
       <script>
+          var score = parseInt(localStorage.getItem('score'))
+          document.getElementById('scoreValue').innerText = score
+          if (localStorage.getItem('answered3') === "true") {
+          fini.style.display = "block"
+          }
         function verifie() {
            var checkboxes = document.getElementsByName("perimetreAire")
           var pereimetreCheckbox = document.getElementById("reponse1")
@@ -62,6 +85,11 @@
           }
         if ((nombreDeCheck == 2) && (pereimetreCheckbox.checked && aireCheckbox.checked)) {
             message += "Bravo! La réponse est correcte."
+            if (localStorage.getItem('answered3') !== "true") {
+                localStorage.setItem('answered3', true)
+          fini.style.display = "block"
+          incremente()
+          }
         } else {
             message += "La réponse est incorrecte."
         }
@@ -70,6 +98,19 @@
         function back() {
           location.href = "index.html"
         }
+        function done() {
+          location.href = "index.html"
+        }
+        function incremente(){
+          if (score < 9) {
+              score += 1
+              document.getElementById('scoreValue').innerText = score
+              localStorage.setItem('score', score)
+        }
+        }
+        if (localStorage.getItem('answered1') === null) {
+         localStorage.setItem('answered1', false)
+          }
       </script>
       </form>
     </body>
