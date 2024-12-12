@@ -80,7 +80,6 @@
           var reponse1 = parseInt(document.getElementById("reponse1").value)
           var message = ""
         if (reponse1 == 10) {
-          message += "Bravo! La réponse est correcte."
           localStorage.setItem('answered1', true)
           incremente()
         } else {
@@ -88,7 +87,8 @@
         } 
           affiche.innerHTML = message
         }
-        if (localStorage.getItem('answered1') === true) {
+        if (localStorage.getItem('answered1') === "true") {
+          message += "Bravo! La réponse est correcte."
           document.getElementById('prochain').style.display = 'block'
         } else {
           document.getElementById('prochain').style.display = 'none'
