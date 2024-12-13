@@ -1,1 +1,28 @@
-
+body {
+  text-align: center;
+}
+input[type="button"] {
+  font-size: 20px;
+  padding: 10px 20px;
+}
+/*https://www.w3schools.com/css/css_form.asp*/
+#affiche {
+  font-size: 30px;
+}
+#retour {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+#score {
+  font-size: 20px;
+  background-color: gray;
+  top: 20px;
+  right: 20px;
+  position: fixed;
+  border-radius: 10px;
+  padding: 20px;
+  width: 90px;
+  height: 25px;
+  text-align: center;
+}
