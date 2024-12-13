@@ -51,7 +51,6 @@
               <!-- Indice envers la réponse -->
               <p>Ils sont similaires, fais attention.</p>
           </div>
-          <br>
           <input type="radio" name="choix" value="Slovaquie"> Slovaquie
           <br>
           <input type="radio" name="choix" value="Slovénie"> Slovénie
@@ -70,7 +69,7 @@
           var reponseCorrecte = false;
 
           for (var i = 0; i < choix.length; i++) {
-            if (choix[i].checked && choix[i].value === "Slovénie") {
+            if (choix[i].checked && choix[i].value === "Slovaquie") {
               reponseCorrecte = true;
               break;
             }
