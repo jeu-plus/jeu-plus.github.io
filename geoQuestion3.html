@@ -2,30 +2,24 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Géographie - Question 3</title>
+        <title>Géographie - Question 1</title>
         <style>
           body {
             text-align: center;
           }
-          input[type="text"] {
-            width: 80px;
-            height: 80px;
+          select {
             font-size: 20px;
-            text-align: center;
-            margin-left: 10px;
-            border: 2px solid black;
+            padding: 10px;
+            margin-top: 20px;
           }
           input[type="button"] {
             font-size: 20px;
             padding: 10px 20px;
-          }
-          #equation {
-            display: inline-flex;;
-            align-items: center;
-            font-size: 50px;
+            margin-top: 20px;
           }
           #affiche {
             font-size: 30px;
+            margin-top: 20px;
           }
           #retour {
             position: fixed;
@@ -41,42 +35,52 @@
     </head>
     <body>
       <form>
-          <!-- creation de la premiere question -->
-    <h1 id="title">Géographie - Question 1</h1>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Asia_in_the_world_%28red%29_%28W3%29.svg/800px-Asia_in_the_world_%28red%29_%28W3%29.svg.png" height="325px" width="750px">
-      <p style="font-size: 30px;">Quelle est le capital de l'Australie?</p>
-      <hr>
-      <div id=continent>
-          <!-- Indice envers la réponse -->
-      <p>Il y a seulment 7 continents.</p>
-      <input type="text" id="reponse1">
-      </div>
-        <br>
-        <input type="button" onclick= "verifie()"  value="Soummettre">
-        <div id="affiche"></div>
-        <input type="button" id="retour" onclick="back()"  value="Retour">
-        <input type="button" id="prochain" onclick="next()"  style="display: none;" value="Prochaine Question">
+          <!-- création de la première question -->
+          <h1 id="title">Géographie - Question 1</h1>
+          <p style="font-size: 30px;">Quelle est la capitale de l'Australie ?</p>
+          <hr>
+          
+          <!-- Dropdown box with options -->
+          <select id="choix">
+              <option value="" disabled selected>Choisissez une ville</option>
+              <option value="Sydney">Sydney</option>
+              <option value="Canberra">Canberra</option>
+              <option value="Melbourne">Melbourne</option>
+              <option value="Perth">Perth</option>
+              <option value="Brisbane">Brisbane</option>
+          </select>
+          <br>
+          
+          <input type="button" onclick="verifie()" value="Soumettre">
+          <div id="affiche"></div>
+          <input type="button" id="retour" onclick="back()" value="Retour">
+          <input type="button" id="prochain" onclick="next()" style="display: none;" value="Prochaine Question">
+      </form>
+
       <script>
-          //function pour vérifier si la réponse est bonne et si non, affiche un message que cela n'est pas bbon
+        // Fonction pour vérifier si la réponse est correcte
         function verifie() {
-          var reponse1 = (document.getElementById("reponse1").value).toLowerCase()
-          var message = ""
-        if (reponse1 == "asie") {
-          message += "Bravo! La réponse est correcte."
-          prochain.style.display = "block"
-        } else {
-          message += "La réponse est incorrecte."
-          prochain.style.display = "none"
-        } 
-          affiche.innerHTML = message
+          var choix = document.getElementById("choix").value;
+          var message = "";
+
+          if (choix === "Canberra") {
+            message = "Bravo! La réponse est correcte.";
+            document.getElementById("prochain").style.display = "block";
+          } else {
+            message = "La réponse est incorrecte.";
+            document.getElementById("prochain").style.display = "none";
+          }
+
+          document.getElementById("affiche").innerHTML = message;
         }
+
         function back() {
-          location.href = "index.html"
+          location.href = "index.html";
         }
+
         function next() {
-          location.href = "geoQuestion2.html"
+          location.href = "geoQuestion2.html";
         }
       </script>
-      </form>
     </body>
 </html>
