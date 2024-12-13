@@ -3,10 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>Géographie - Question 1</title>
+        <link rel="stylesheet" href="CSS/styleCommun.css">
         <style>
-          body {
-            text-align: center;
-          }
           input[type="text"] {
             width: 80px;
             height: 80px;
@@ -15,22 +13,10 @@
             margin-left: 10px;
             border: 2px solid black;
           }
-          input[type="button"] {
-            font-size: 20px;
-            padding: 10px 20px;
-          }
           #equation {
             display: inline-flex;;
             align-items: center;
             font-size: 50px;
-          }
-          #affiche {
-            font-size: 30px;
-          }
-          #retour {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
           }
           #prochain {
             position: fixed;
@@ -56,26 +42,50 @@
         <div id="affiche"></div>
         <input type="button" id="retour" onclick="back()"  value="Retour">
         <input type="button" id="prochain" onclick="next()"  style="display: none;" value="Prochaine Question">
+          <div id="score">
+          Score : <span id="scoreValue">0</span>/9
+        </div>
       <script>
-          //function pour vérifier si la réponse est bonne et si non, affiche un message que cela n'est pas bbon
+          var score = parseInt(localStorage.getItem('score'))
+          document.getElementById('scoreValue').innerText = score
+          if (localStorage.getItem('answered7') === "true") {
+          prochain.style.display = "block"
+          }
+          /*Initialize le score sur le page et vérifie si la question est déja repondu ou non*/
         function verifie() {
           var reponse1 = (document.getElementById("reponse1").value).toLowerCase()
           var message = ""
         if (reponse1 == "asie") {
           message += "Bravo! La réponse est correcte."
+            if (localStorage.getItem('answered7') !== "true") {
+          localStorage.setItem('answered7', true)
           prochain.style.display = "block"
+          incremente()
+            }
         } else {
           message += "La réponse est incorrecte."
-          prochain.style.display = "none"
         } 
           affiche.innerHTML = message
         }
+              /*Vérifie la réponse, si correct affiche message et boutton, declare comme répondu et incrémente score, si incorrect affiche autre message*/
         function back() {
           location.href = "index.html"
         }
         function next() {
           location.href = "geoQuestion2.html"
         }
+          function incremente(){
+          if (score < 9) {
+              score += 1
+              document.getElementById('scoreValue').innerText = score
+              localStorage.setItem('score', score)
+        }
+        }
+          /*Fonction pour les bouton et l'incrémentation du score*/
+        if (localStorage.getItem('answered7') === null) {
+         localStorage.setItem('answered7', false)
+          }
+          /*Vérifie si answered1 exist, si non, il est crée et assigné a false par départ*/
       </script>
       </form>
     </body>
