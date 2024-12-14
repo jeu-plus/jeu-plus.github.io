@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+<!-- Code par Simon -->
     <head>
         <meta charset="utf-8">
         <title>Mathématique - Question 1</title>
@@ -14,7 +14,7 @@
             margin-left: 10px;
             border: 2px solid black;
           }
-          /*https://www.w3schools.com/css/css_form.asp*/
+          /*https://www.w3schools.com/css/css_form.asp - Ce code done des styles aux inputs.*/
           #equation {
             display: inline-flex;;
             align-items: center;
@@ -53,7 +53,7 @@
           if (localStorage.getItem('answered1') === "true") {
           prochain.style.display = "block"
           }
-          /*https://www.w3schools.com/jsref/prop_win_localstorage.asp*/
+          /*https://www.w3schools.com/jsref/prop_win_localstorage.asp - Ce code vérifie si la question est déja répondu ou nom.*/
           /*Initialize le score sur le page et vérifie si la question est déja repondu ou non*/
         function verifie() {
           var reponse1 = parseInt(document.getElementById("reponse1").value)
@@ -88,7 +88,7 @@
         if (localStorage.getItem('answered1') === null) {
          localStorage.setItem('answered1', false)
           }
-          /*https://www.w3schools.com/jsref/prop_win_localstorage.asp*/
+          /*https://www.w3schools.com/jsref/prop_win_localstorage.asp - Ce code marque la question comme non répondu si non répondu.*/
           /*Vérifie si answered1 exist, si non, il est crée et assigné a false par départ*/
       </script>
       </form>
