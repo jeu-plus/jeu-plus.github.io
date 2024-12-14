@@ -54,6 +54,7 @@
           if (localStorage.getItem('answered8') === "true") {
           prochain.style.display = "block"
           }
+          /*https://www.w3schools.com/jsref/prop_win_localstorage.asp*/
         /*Initialize le score sur le page et vérifie si la question est déja repondu ou non*/
         function verifie() {
           var choix = document.getElementsByName("choix");
@@ -97,6 +98,7 @@
         if (localStorage.getItem('answered8') === null) {
          localStorage.setItem('answered8', false)
           }
+          /*https://www.w3schools.com/jsref/prop_win_localstorage.asp*/
         /*Vérifie si answered8 exist, si non, il est crée et assigné a false par départ*/
       </script>
      </form>
