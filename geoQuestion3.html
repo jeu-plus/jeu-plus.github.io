@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    <!-- Code par Tyson -->
     <head>
         <meta charset="utf-8">
         <title>Géographie - Question 3</title>
@@ -50,7 +51,7 @@
           if (localStorage.getItem('answered9') === "true") {
           prochain.style.display = "block"
           }
-          /*https://www.w3schools.com/jsref/prop_win_localstorage.asp*/
+          /*https://www.w3schools.com/jsref/prop_win_localstorage.asp - Ce code vérifie si la question est déja répondu ou nom.*/
         /*Initialize le score sur le page et vérifie si la question est déja repondu ou non*/
         function verifie() {
           var choix = document.getElementById("choix").value;
@@ -86,7 +87,7 @@
         if (localStorage.getItem('answered9') === null) {
          localStorage.setItem('answered9', false)
           }
-          /*https://www.w3schools.com/jsref/prop_win_localstorage.asp*/
+          /*https://www.w3schools.com/jsref/prop_win_localstorage.asp - Ce code marque la question comme non répondu si non répondu.*/
     /*Vérifie si answered9 exist, si non, il est crée et assigné a false par départ*/
       </script>
      </form>
