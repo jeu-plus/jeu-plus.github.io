@@ -45,6 +45,7 @@
           if (localStorage.getItem('answered3') === "true") {
           fini.style.display = "block"
           }
+          /*https://www.w3schools.com/jsref/prop_win_localstorage.asp*/
           /*Initialize le score sur le page et vérifie si la question est déja repondu ou non*/
         function verifie() {
            var checkboxes = document.getElementsByName("perimetreAire")
@@ -87,6 +88,7 @@
         if (localStorage.getItem('answered1') === null) {
          localStorage.setItem('answered1', false)
           }
+          /*https://www.w3schools.com/jsref/prop_win_localstorage.asp*/
           /*Vérifie si answered3 exist, si non, il est crée et assigné a false par départ*/
       </script>
       </form>
