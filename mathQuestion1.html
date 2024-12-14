@@ -65,8 +65,8 @@
           prochain.style.display = "block"
           incremente()
           }
-        } else if ((typeof reponse1 === "string") && (reponse1 < 0))
-        /*https://www.w3schools.com/js/js_typeof.asp - Ce code voit si la réponse est un string ou est négatif.*/ 
+        } else if ((isNaN(reponse1) || (reponse1 < 0))
+        /*https://www.w3schools.com/jsref/jsref_isnan.asp - Ce code voit si la réponse est un string ou est négatif.*/ 
         { message += "Entrée invalide! Entrez un nombre positif valide."
         } else {
           message += "La réponse est incorrecte."
