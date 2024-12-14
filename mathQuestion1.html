@@ -54,6 +54,7 @@
           prochain.style.display = "block"
           }
           /*Initialize le score sur le page et vérifie si la question est déja repondu ou non*/
+          /*https://www.w3schools.com/jsref/prop_win_localstorage.asp*/
         function verifie() {
           var reponse1 = parseInt(document.getElementById("reponse1").value)
           var message = ""
@@ -88,6 +89,7 @@
          localStorage.setItem('answered1', false)
           }
           /*Vérifie si answered1 exist, si non, il est crée et assigné a false par départ*/
+          /*https://www.w3schools.com/jsref/prop_win_localstorage.asp*/
       </script>
       </form>
     </body>
