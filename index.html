@@ -74,6 +74,8 @@
         <script>
           var score = localStorage.getItem('score')
           document.getElementById('scoreValue').innerText = score
+          /*Fonction pour refraîchir le score et les questions répondues*/
+          /*https://www.w3schools.com/jsref/prop_win_localstorage.asp - Ce code rafraîchi le score et les questions répondu.*/
           function refresh() {
             localStorage.setItem('score', 0)
             document.getElementById('scoreValue').innerText = 0;
@@ -87,7 +89,6 @@
               localStorage.setItem('answered8', false)
               localStorage.setItem('answered9', false)
           }
-        /*https://www.w3schools.com/jsref/prop_win_localstorage.asp - Ce code rafraîchi le score et les questions répondu.*/
         </script>
       </form>
     </body>
