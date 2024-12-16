@@ -77,13 +77,13 @@
         function next() {
           location.href = "scienceQuestion2.html"
         }
-        /*Fonction pour incrémenter le score*/
+       /*Fonction pour incrémenter le score*/
         function incremente(){
           if (score < 9) {
-            score += 1
-            document.getElementById('answered4').innerText = score
-            localStorage.setItem('answered4', false)
-          }  
+              score += 1
+              document.getElementById('scoreValue').innerText = score
+              localStorage.setItem('score', score)
+        }
         }
         /*Vérifie si answered4 exist, si non, il est crée et assigné a false par départ*/
         /*https://www.w3schools.com/jsref/prop_win_localstorage.asp - Ce code marque la question comme non répondu si non répondu.*/
