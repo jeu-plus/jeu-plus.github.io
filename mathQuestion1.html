@@ -59,6 +59,7 @@
         function verifie() {
           var reponse1 = parseInt(document.getElementById("reponse1").value)
           var message = ""
+          /*Produit seulement si la réponse est correcte et si la question n'est pas déja répondu*/
         if (reponse1 == 10) {
           message += "Bravo! La réponse est correcte."
           if (localStorage.getItem('answered1') !== "true") {
@@ -78,7 +79,7 @@
         function back() {
           location.href = "index.html"
         }
-        /*Fonction pour le bouton de la prochaine question*/
+        /*Fonction le bouton de la prochaine question*/
         function next() {
           location.href = "mathQuestion2.html"
         }
