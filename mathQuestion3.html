@@ -54,11 +54,13 @@
           var aireCheckbox = document.getElementById("reponse4")
           var nombreDeCheck = 0
           var message = ""
+          /*Determine combien de boites sont cochees*/
           for (var i=0; i < checkboxes.length; i++) {
              if (checkboxes[i].checked) {
                  nombreDeCheck++
              }
           }
+          /*Produit seulement si la réponse est correcte, deux boites sont cochées et si la question n'est pas déja répondu*/
         if ((nombreDeCheck == 2) && (pereimetreCheckbox.checked && aireCheckbox.checked)) {
             message += "Bravo! La réponse est correcte."
             if (localStorage.getItem('answered3') !== "true") {
