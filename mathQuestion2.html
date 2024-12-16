@@ -61,6 +61,7 @@
         function verifie() {
           var reponse2 = parseInt(document.getElementById("reponse2").value)
           var message = ""
+          /*Produit seulement si la réponse est correcte et si la question n'est pas déja répondu*/
         if (reponse2 == 40) {
           message += "Bravo! La réponse est correcte."
           if (localStorage.getItem('answered2') !== "true") {
