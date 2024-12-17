@@ -80,7 +80,7 @@
     /*Produit seulement si la réponse est correcte et si la question n'est pas déja répondu*/
     if (choix == "Amphibien") {
       message += "Bravo! la réponse est correcte."
-      if (localStorage.getItem('answered9') !=="true") {
+      if (localStorage.getItem('answered9') !== "true") {
       localStorage.setItem('answered9', true)
       prochain.style.display = "block"
       incremente()
