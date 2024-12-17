@@ -68,14 +68,14 @@
     <script> 
     /*Initialize le score sur le page et vérifie si la question est déja repondu ou non*/
      var score = parseInt(localStorage.getItem('score'))
-     document.getItemById('scoreValue').innerText = score
+     document.getElementById('scoreValue').innerText = score
     /*https://www.w3schools.com/jsref/prop_win_localstorage.asp - Ce code vérifie si la question est déja répondu ou nom.*/
           if (localStorage.getItem('answered9') === "true") {
      prochain.style.display = "block"
       }
     /*Fonction qui vérifie la réponse, si correct affiche message et boutton, declare comme répondu et incrémente score, si incorrect affiche autre message*/
     function verifie() {
-    var choix = (document.getItemById("choix").value;
+    var choix = (document.getElememtById("choix").value;
     var message = "";
     /*Produit seulement si la réponse est correcte et si la question n'est pas déja répondu*/
     if (choix == "Amphibien") {
