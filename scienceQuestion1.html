@@ -34,9 +34,14 @@
       <p style="font-size: 30px;">Paul laisse un glaçon au soleil, et il commence à fondre. Le glaçon est maintenant à quel état?
 ?</p> 
       <p> </p>
-      <input type="text" id="reponse1">
+      <input type="radio" id="reponse1">
       </div>
+        <input type="radio" name="choix" value="Solide"> Solide
         <br>
+        <input type="radio" name="choix" value="Liquide> Liquide
+        <br>
+        <input type="radio" name="choix" value="Vapeur"> Vapeur
+        <br><br>
         <input type="button" onclick= "verifie()"  value="Soummettre">
         <div id="affiche"></div>
         <input type="button" id="retour" onclick="back()"  value="Retour">
@@ -54,20 +59,29 @@
           }
         /*Fonction qui vérifie la réponse, si correct affiche message et boutton, declare comme répondu et incrémente score, si incorrect affiche autre message*/
         function verifie() {
-          var reponse1 =  (document.getElementById("reponse1").value).toLowerCase()
-          var message = ""
+          var choix = document.getElementsByName("choix")
+          var message = "";
+          var reponseCorrecte = false;
+
+          for  (var i = 0; i < choix.length; i++) {
+            if (choix[i].checked && choix[i].value === "Liquide") {
+              reponseCorrecte = true;
+              break;
+            }
+          }
            /*Produit seulement si la réponse est correcte et si la question n'est pas déja répondu*/
-        if (reponse1 == "liquide") {
+        if (reponseCorrecte) {
           message += "Bravo! La réponse est correcte."
-          if (localStorage.getItem('answered9') !== "true") {
-          localStorage.setItem('answered9', true)
+          if (localStorage.getItem('answered8') !== "true") {
+          localStorage.setItem('answered8', true)
           prochain.style.display = "block"
           incremente()
           }
         } else {
-          message += "La réponse est incorrecte."
+          message += "La réponse est incorrecte.";
+          
         } 
-          affiche.innerHTML = message
+          document.getElementByName("affiche").innerHTML = message
         }
         /*Fonction pour le boutton de retour*/
         function back() {
@@ -87,8 +101,8 @@
         }
         /*Vérifie si answered4 exist, si non, il est crée et assigné a false par départ*/
         /*https://www.w3schools.com/jsref/prop_win_localstorage.asp - Ce code marque la question comme non répondu si non répondu.*/
-        if (localStorage.getItem('answered4') == null) { 
-          localStorage.setItem('answered9', false)
+        if (localStorage.getItem('answered8') == null) { 
+          localStorage.setItem('answered8', false)
         }
       </script>
       </form>
