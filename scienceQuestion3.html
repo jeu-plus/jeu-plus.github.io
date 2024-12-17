@@ -1,1 +1,61 @@
-
+<!DOCTYPE html>
+  <html>
+    <!-- creation des mots sur l'onglet-->
+    <head>
+      <meta charset="utf-8">
+      <title>Quiz: Science</title>
+      <style>
+          body {
+            text-align: center;
+          }
+          input[type="text"] {
+            width: 80px;
+            height: 80px;
+            font-size: 20px;
+            text-align: center;
+            margin-left: 10px;
+            border: 2px solid black;
+          }
+          input[type="button"] {
+            font-size: 20px;
+            padding: 10px 20px;
+          }
+          #equation {
+            display: inline-flex;;
+            align-items: center;
+            font-size: 50px;
+          }
+          #affiche {
+            font-size: 30px;
+          }
+          #retour {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+          }
+          #prochain {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+          }
+        </style>
+    </head>
+    </head>
+  <body>
+    <h1 id="title">Science - Question 2</h1>
+    <form>
+      <img src="affiche" height="" width="">
+      <p style="font-size:30px;">Léa observe une grenouille dans un étang. Cet animal vit dans l’eau et sur terre. Comment appelle-t-on ce type d’animal ?
+</p>
+      <p></p>
+      <input type="" id="reponse2">
+    </div>
+      <br>
+      <input type="button" onclick= "verifie()" value="Soumettre">
+      <div id="affiche"></div>
+      <input type="button" id="retour" onclick="back()" value="retour">
+      <input type="button" id="prochain" onclick="next()" style="display: none;" value="Prochaine Question">
+       <div id="score">
+          Score : <span id="scoreValue">0</span>/9
+        </div>
+    <script> 
