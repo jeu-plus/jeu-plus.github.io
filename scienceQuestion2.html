@@ -47,10 +47,17 @@
       <img src="https://cache.magicmaman.com/data/photo/w1200_h630_c18/4c/grenouille.jpg" height="325px" width="500px">
       <p style="font-size:30px;">Léa observe une grenouille dans un étang. Cet animal vit dans l’eau et sur terre. Comment appelle-t-on ce type d’animal ?
 </p>
-      <p></p>
-      <input type="" id="reponse2">
-    </div>
-      <br>
+      <hr>
+   
+          <!-- Dropdown box with options -->
+          <select id="choix">
+              <option value="" disabled selected>Choisi un type d'animal</option>
+              <option value="Amphibien">Amphibien</option>
+              <option value="Mamiphère">Mamiphère</option>
+              <option value="Carnivore">Carnivore</option>
+              <option value="Herbivore">Herbivore</option>
+          </select>
+          <br>
       <input type="button" onclick= "verifie()" value="Soumettre">
       <div id="affiche"></div>
       <input type="button" id="retour" onclick="back()" value="retour">
@@ -68,10 +75,10 @@
       }
     /*Fonction qui vérifie la réponse, si correct affiche message et boutton, declare comme répondu et incrémente score, si incorrect affiche autre message*/
     function verifie() {
-    var reponse2 = (document.getItemById("reponse2").value).toLowerCase()
-    var message = ""
+    var choix = (document.getItemById("choix").value;
+    var message = "";
     /*Produit seulement si la réponse est correcte et si la question n'est pas déja répondu*/
-    if (reponse2 == "Amphibien") {
+    if (choix == "Amphibien") {
       message += "Bravo! la réponse est correcte."
       if (localStorage.getItem('answered4') !=="true") {
       localStorage.setItem('answered4',true)
