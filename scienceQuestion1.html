@@ -72,7 +72,7 @@
            /*Produit seulement si la réponse est correcte et si la question n'est pas déja répondu*/
         if (reponseCorrecte) {
           message += "Bravo! La réponse est correcte."
-          if (localStorage.getItem('answered8') !== "true") !== "true") {
+          if (localStorage.getItem('answered8') !== "true") {
           localStorage.setItem('answered8', true)
           prochain.style.display = "block"
           incremente()
