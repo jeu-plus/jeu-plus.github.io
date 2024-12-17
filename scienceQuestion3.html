@@ -70,7 +70,7 @@
           var reponse1 =  (document.getElementById("reponse1").value).toLowerCase()
           var message = ""
            /*Produit seulement si la réponse est correcte et si la question n'est pas déja répondu*/
-        if (reponse1 == "liquide") {
+        if (reponse2 == "liquide") {
           message += "Bravo! La réponse est correcte."
           if (localStorage.getItem('answered4') !== "true") {
           localStorage.setItem('answered4', true)
