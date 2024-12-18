@@ -1,5 +1,6 @@
 <!DOCTYPE html>
   <html>
+    <!--Code par Owen-->
     <!-- creation des mots sur l'onglet-->
     <head>
       <meta charset="utf-8">
@@ -41,7 +42,6 @@
           } 
         </style>
     </head>
-    </head>
   <body>
     <form>
     <h1 id="title">Science - Question 2</h1>
@@ -54,7 +54,7 @@
           <select id="choix">
               <option value="" disabled selected>Choisi un type d'animal</option>
               <option value="Amphibien">Amphibien</option>
-              <option value="Mamiphère">Mamiphère</option>
+              <option value="Mamiphère">Mammifère</option>
               <option value="Carnivore">Carnivore</option>
               <option value="Herbivore">Herbivore</option>
           </select>
@@ -76,7 +76,7 @@
       }
     /*Fonction qui vérifie la réponse, si correct affiche message et boutton, declare comme répondu et incrémente score, si incorrect affiche autre message*/
     function verifie() {
-    var choix = (document.getElementById("choix").value;
+    var choix = document.getElementById("choix").value;
     var message = "";
     /*Produit seulement si la réponse est correcte et si la question n'est pas déja répondu*/
     if (choix == "Amphibien") {
