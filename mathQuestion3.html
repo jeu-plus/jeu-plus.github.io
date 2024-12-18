@@ -32,7 +32,7 @@
       <input type="checkbox" id="reponse3" name="perimetreAire" value="5">Aire = 5 métres^2    <br>
       <input type="checkbox" id="reponse4" name="perimetreAire" value="10">Aire = 10 métres^2   <br>
         <br>
-        <input type="button" onclick= "verifie()"  value="Soummettre">
+        <input type="button" onclick= "verifie()"  value="Soumettre">
         <div id="affiche"></div>
         <input type="button" id="retour" onclick="back()"  value="Retour">
         <input type="button" id="fini" onclick="back()"  style="display: none;" value="Questionnaire Mathématique Terminé">
@@ -69,7 +69,7 @@
           incremente()
           }
         } else {
-            message += "La réponse est incorrecte."
+            message += "La réponse est incorrecte. Essayer encore."
         }
           affiche.innerHTML = message
         }
