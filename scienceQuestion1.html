@@ -40,7 +40,7 @@
         <br>
         <input type="radio" name="choix" value="Vapeur"> Vapeur
         <br><br>
-        <input type="button" onclick= "verifie()"  value="Soummettre">
+        <input type="button" onclick= "verifie()"  value="Soumettre">
         <div id="affiche"></div>
         <input type="button" id="retour" onclick="back()"  value="Retour">
         <input type="button" id="prochain" onclick="next()"  style="display: none;" value="Prochaine Question">
@@ -76,7 +76,7 @@
           incremente()
           }
         } else {
-          message += "La réponse est incorrecte.";
+          message += "La réponse est incorrecte. Essayer encore.";
           
         } 
           document.getElementById("affiche").innerHTML = message
