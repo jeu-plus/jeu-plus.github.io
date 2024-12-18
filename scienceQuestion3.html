@@ -13,6 +13,7 @@
             font-size: 20px;
             text-align: center;
             margin-left: 10px;
+            margin-bottom: 10px;
             border: 2px solid black;
           }
           #prochain {
@@ -51,7 +52,7 @@
           var reponse3 =  (document.getElementById("reponse3").value).toLowerCase()
           var message = ""
            /*Produit seulement si la réponse est correcte et si la question n'est pas déja répondu*/
-        if ((reponse3 == "photosynthèse") && (reponse3 == "photosynthese")) {
+        if ((reponse3 == "photosynthèse") || (reponse3 == "photosynthese")) {
           message += "Bravo! La réponse est correcte."
           if (localStorage.getItem('answered6') !== "true") {
           localStorage.setItem('answered6', true)
