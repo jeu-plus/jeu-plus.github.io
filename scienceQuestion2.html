@@ -38,7 +38,7 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-          }
+          } 
         </style>
     </head>
     </head>
@@ -72,7 +72,7 @@
      document.getElementById('scoreValue').innerText = score
     /*https://www.w3schools.com/jsref/prop_win_localstorage.asp - Ce code vérifie si la question est déja répondu ou nom.*/
           if (localStorage.getItem('answered5') === "true") {
-     prochain.style.display = "block"
+     document.getElementById('prochain').style.display = "block"
       }
     /*Fonction qui vérifie la réponse, si correct affiche message et boutton, declare comme répondu et incrémente score, si incorrect affiche autre message*/
     function verifie() {
@@ -83,7 +83,7 @@
       message += "Bravo! la réponse est correcte."
       if (localStorage.getItem('answered5') !== "true") {
       localStorage.setItem('answered5', true)
-      prochain.style.display = "block"
+      document.getElementById('prochain').style.display = "block"
       incremente()
       }
     } else {
