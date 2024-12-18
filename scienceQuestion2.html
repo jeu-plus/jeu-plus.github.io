@@ -104,6 +104,7 @@
       if (score < 9) {
       score += 1
       document.getElementById('scoreValue').innnerText = score
+        localStorage.setItem('score', score)
       }
     }
       /*Vérifie si answered5 exist, si non, il est crée et assigné a false par départ*/
